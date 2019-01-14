@@ -11,6 +11,9 @@
   <body>
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
   <div class='container'>
+    <% flash.each do |type, msg| %>
+      <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+<% end %>
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
         <span class="sr-only">Toggle navigation</span>
